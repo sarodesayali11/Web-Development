@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            background: #21292c;
+            background-image: url("Images/image1cow.jpg");
+            background-size: cover;
+            background-position: center
+        }
+        
+        .form
+        {
+
+            width: 500px;
+            height: 400px;
+            border-radius: 20px;
+
+        }
+        .box1
+        {
+            border: solid 2px white;
+            font-size: 20px;
+            margin: 40px;
+            padding: 20px 70px 20px 70px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: rgba(176, 196, 222, 0.6);
+        }
+        input
+        {
+            border:2px solid black;
+            margin: 16px auto;
+            width: 170px;
+            height: 40px;
+            border-radius: 20px;
+            background: none;
+        }
+        .l3
+        {   
+            text-align: center;
+            width: 250px;
+        }
+        .btn1
+        {
+            height: 40px;
+            width: 150px;
+            font-size: 15px;
+            border-radius: 10px;
+            background-color: yellow;
+            box-align: center;
+
+        }
+        .btn1:hover
+        {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <form name="frm" action="NewRegistration.php" method="post">
+    <b>
+        <div class="box1">
+        <h2>Register</h2><br>
+        Username  :<input type="text" name="un" class="l3" required><br>
+        Password  :<input type="text" name="pwd" class="l3" required><br>
+        Email     :<input type="text" name="em" class="l3" required><br>
+        Contact   :<input type="text" name="cn" class="l3" required><br>
+        <input type="submit" name="btn" value="SIGN UP NOW" class="btn1" >
+        </div>
+    </b>
+    </form>
+    <script language="javascript">
+        function fun()
+        {
+            var un,pwd,em,cn;
+            un=document.frm.un.value;
+            pwd=document.frm.pwd.value;
+            em=document.frm.em.value;
+            cn=document.frm.cn.value;
+            if(un=="")
+            {
+                alert("please enter username");
+                document.frm.un.focus();
+                return;
+
+            }
+            else if(pwd=="")
+            {
+                alert("please enter password");
+                document.frm.pwd.focus();
+                return;
+                
+            }
+            else if(em=="")
+            {
+                alert("please enter email address");
+                document.frm.em.focus();
+                return;
+                
+            }
+            else if(cn=="")
+            {
+                alert("please enter contact");
+                document.frm.cn.focus();
+                return;
+                
+            }
+            else
+            {
+                alert("your Registration Successfully");
+            }
+        }
+    </script>
+</body>
+</html>
